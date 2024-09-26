@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Json file</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header>
+        <h1 class="capitalize font-bold text-center text-3xl mt-5 ">Mobile shop</h1>
+        
+    </header>
+   <div class=" flex justify-center my-5">
+    <input type="text" id="search-feild" placeholder="Search..." class="input input-bordered w-full max-w-xs" />
+    <button onclick="searchHandler()" class="btn">Search</button>
+   </div>
+   <!-- modal  -->
+    <div>
+                <!-- Open the modal using ID.showModal() method -->
+        <dialog id="show_details_modal" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box">
+            <h3 id="shoe-details-phone-name" class="text-3xl font-bold text-center my-3"></h3>
+            <div id="show-details-container" class="">
+
+            </div>
+            <div class="modal-action">
+                <form method="dialog">
+                  <!-- if there is a button in form, it will close the modal -->
+                  <button class="btn">Close</button>
+                </form>
+              </div>
+        </div>
+        </dialog>
+    </div>
+   <!-- speenare -->
+   <div id="lorading-spiner" class="my-48 text-center hidden">
+     <span class="loading loading-spinner text-primary"></span>
+   </div>
+    <section class="container mx-auto my-10">
+        <div id="phone-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 ">
+        </div>
+    </section>
+    <!-- see all button  -->
+    <div onclick="handlaeShowAll()" id="show-all" class=" hidden text-center my-4 ">
+        <button class="btn btn-primary ">Show All</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
